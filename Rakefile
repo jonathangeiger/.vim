@@ -38,7 +38,7 @@ end
 desc "Upgrades to the latest revision"
 task :upgrade do
   system 'git pull'
-  system 'git submodule foreach git pull'
+  system 'git submodule foreach git pull origin master'
 end
 
 task :default => [:bundle]
