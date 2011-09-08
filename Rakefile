@@ -6,7 +6,6 @@ task :bundle do
   system "cd bundle/command-t && rake make"
 end
 
-
 desc "Symlinks your .vimrc and .gvimrc to the local versions"
 task :symlink do
   %w[ vimrc gvimrc ].each do |file|
@@ -17,20 +16,23 @@ task :symlink do
   end
 end
 
-
 desc "Copies the repo to your .vim folder. Backs up any existing .vim first"
 task :copy do
   dest = File.expand_path("~/.vim")
   cwd  = File.dirname(__FILE__)
 
   # Backup the existing vim install
-  unless dest == cwd
-    if File.exists?(dest)
-      File.rename(dest, dest + Time.now.strftime('%Y-%m-%d-%H-%M-%S'))
+  if File.exists?(dest)
+    backup_dir = dest + '-backups/'
+    
+    unless File.exists?(backup_dir)
+      Dir.mkdir(backup_dir)
     end
-
-    FileUtils.cp_r(File.dirname(__FILE__), dest)
+    
+    File.rename(dest, backup_dir + Time.now.strftime('%Y-%m-%d-%H-%M-%S'))
   end
+
+  FileUtils.cp_r(File.dirname(__FILE__), dest)
 end
 
 desc "Upgrades to the latest revision"
