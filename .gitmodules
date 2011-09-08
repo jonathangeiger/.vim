@@ -55,3 +55,6 @@
 [submodule "bundle/jinja-html"]
 	path = bundle/jinja-html
 	url = git://github.com/ocim/htmljinja.vim.git
+[submodule "bundle/conque"]
+	path = bundle/conque
+	url = git://github.com/rson/vim-conque.git
