@@ -1,3 +1,17 @@
+desc "Cleans the repo of any extraneous files"
+task :clean do 
+  system "git clean -dfx"
+end
+
+
+desc "Installs all of the bundles"
+task :bundle do
+  system "git submodule update --init"
+  system "cd bundle/command-t && rake make"
+end
+
+
+desc "Symlinks your .vimrc and .gvimrc to the local versions"
 task :symlink do
   %w[ vimrc gvimrc ].each do |file|
     dest = File.expand_path("~/.#{file}")
@@ -7,15 +21,8 @@ task :symlink do
   end
 end
 
-task :clean do 
-  system "git clean -dfx"
-end
 
-task :bundle do
-  system "git submodule update --init"
-  system "cd bundle/command-t && rake make"
-end
-
+desc "Copies the repo to your .vim folder. Backs up any existing .vim first"
 task :copy do
   dest = File.expand_path("~/.vim")
   cwd  = File.dirname(__FILE__)
@@ -30,4 +37,5 @@ task :copy do
   end
 end
 
+task :default => [:bundle]
 task :install => [:clean, :bundle, :copy, :symlink]
