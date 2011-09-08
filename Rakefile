@@ -1,9 +1,3 @@
-desc "Cleans the repo of any extraneous files"
-task :clean do 
-  system "git clean -dfx"
-end
-
-
 desc "Installs all of the bundles"
 task :bundle do
   # Update submodules
@@ -46,4 +40,4 @@ task :upgrade do
 end
 
 task :default => [:bundle]
-task :install => [:clean, :upgrade, :bundle, :copy, :symlink]
+task :install => [:bundle, :copy, :symlink]
