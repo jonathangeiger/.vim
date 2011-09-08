@@ -6,7 +6,9 @@ end
 
 desc "Installs all of the bundles"
 task :bundle do
+  # Update submodules
   system "git submodule update --init"
+  # Make command-t
   system "cd bundle/command-t && rake make"
 end
 
@@ -37,5 +39,11 @@ task :copy do
   end
 end
 
+desc "Upgrades to the latest revision"
+task :upgrade do
+  system 'git pull'
+  system 'git submodule foreach git pull'
+end
+
 task :default => [:bundle]
-task :install => [:clean, :bundle, :copy, :symlink]
+task :install => [:clean, :upgrade, :bundle, :copy, :symlink]
