@@ -35,8 +35,8 @@ task :copy do
   FileUtils.cp_r(File.dirname(__FILE__), dest)
 end
 
-desc "Upgrades to the latest revision"
-task :upgrade do
+desc "Update to the latest revision"
+task :update do
   system 'git pull'
   system 'git submodule foreach git pull origin master'
 end
