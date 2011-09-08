@@ -49,3 +49,9 @@
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = git://github.com/wincent/Command-T.git
+[submodule "bundle/jinja"]
+	path = bundle/jinja
+	url = git://github.com/vim-scripts/Jinja.git
+[submodule "bundle/jinja-html"]
+	path = bundle/jinja-html
+	url = git://github.com/ocim/htmljinja.vim.git
