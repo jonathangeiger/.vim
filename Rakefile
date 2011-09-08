@@ -29,7 +29,7 @@ task :copy do
       File.rename(dest, dest + Time.now.strftime('%Y-%m-%d-%H-%M-%S'))
     end
 
-    File.rename(File.dirname(__FILE__), dest)
+    FileUtils.cp_r(File.dirname(__FILE__), dest)
   end
 end
 
