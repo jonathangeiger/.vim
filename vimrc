@@ -81,11 +81,8 @@ function s:setupMarkup()
   map <buffer> <Leader>p :Hammer<CR>
 endfunction
 
-" make uses real tabs
-au FileType make set noexpandtab
-
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
+au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
 
 " md, markdown, and mk are markdown and define buffer-local preview
 au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
@@ -107,6 +104,8 @@ au FileType python set expandtab softtabstop=4 tabstop=4 shiftwidth=4 textwidth=
 " Ruby
 au FileType ruby set expandtab shiftwidth=2 softtabstop=2
 
+" make uses real tabs
+au FileType make set noexpandtab
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
