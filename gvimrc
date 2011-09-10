@@ -33,8 +33,8 @@ imap <D-E> <ESC>:call StartTerm("ConqueTermSplit")<CR>
 
 " ConqueTerm wrapper
 function StartTerm(command)
-	execute a:command . ' ' . $SHELL . ' --login'
-	setlocal listchars=tab:\ \ 
+  execute a:command . ' ' . $SHELL . ' --login'
+  setlocal listchars=tab:\ \ 
 endfunction
 
 " Command-/ to toggle comments
