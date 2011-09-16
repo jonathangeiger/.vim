@@ -46,9 +46,6 @@
 [submodule "bundle/pathogen"]
 	path = bundle/pathogen
 	url = https://github.com/tpope/vim-pathogen.git
-[submodule "bundle/command-t"]
-	path = bundle/command-t
-	url = https://github.com/wincent/Command-T.git
 [submodule "bundle/jinja"]
 	path = bundle/jinja
 	url = https://github.com/vim-scripts/Jinja.git
@@ -61,3 +58,6 @@
 [submodule "bundle/auto-mkdir"]
 	path = bundle/auto-mkdir
 	url = https://github.com/DataWraith/auto_mkdir.git
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim.git

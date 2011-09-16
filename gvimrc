@@ -5,21 +5,27 @@ set visualbell
 set guioptions=aAce
 set colorcolumn=85
 
-" Flush CommandT when focus is regained
-autocmd FocusGained * CommandTFlush
-
 if has("gui_macvim")
   " Fullscreen takes up entire screen
   set fuoptions=maxhorz,maxvert
 
-  " Command-T for CommandT
+  " Free up <D-t>
   macmenu &File.New\ Tab key=<D-T>
-  nmap <D-t> :CommandT<CR>
-  imap <D-t> <ESC>:CommandT<CR>
 
   " Command-Return for fullscreen
   macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
 endif
+
+" CtrlP
+let g:ctrlp_persistent_input = 0
+let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_max_height = 20
+nmap <D-t> :CtrlP<CR>
+imap <D-t> <ESC>:CtrlP<CR>
+nmap <Leader>tr :ClearCtrlPCache<CR>
+" Flush cache when focus is regained
+autocmd FocusGained * ClearCtrlPCache
 
 " Command-Shift-F for Ack
 nmap <D-F> :Ack<space>''<Left>
