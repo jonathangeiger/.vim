@@ -20,9 +20,12 @@ endif
 let g:ctrlp_persistent_input = 0
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_working_path_mode = 0
-let g:ctrlp_max_height = 20
+let g:ctrlp_max_height = 40
+let g:ctrlp_mruf_max = 100
 nmap <D-t> :CtrlP<CR>
 imap <D-t> <ESC>:CtrlP<CR>
+nmap <D-r> :CtrlPMRUFiles<CR>
+imap <D-r> <ESC>:CtrlPMRUFiles<CR>
 nmap <Leader>tr :ClearCtrlPCache<CR>
 " Flush cache when focus is regained
 autocmd FocusGained * ClearCtrlPCache

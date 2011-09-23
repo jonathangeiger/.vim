@@ -50,7 +50,7 @@
 	path = bundle/jinja
 	url = https://github.com/vim-scripts/Jinja.git
 [submodule "bundle/jinja-html"]
-	path = bundle/jinja-html
+	path = bundle/jinja-htmr
 	url = https://github.com/ocim/htmljinja.vim.git
 [submodule "bundle/conque"]
 	path = bundle/conque
