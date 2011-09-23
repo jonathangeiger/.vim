@@ -89,19 +89,22 @@ au BufNewFile,BufRead *.json set ft=javascript
 au BufRead,BufNewFile *.txt call s:setupWrapping()
 
 " Map .twig files as jinja templates
-au BufRead,BufNewFile *.{twig}  set ft=htmljinja
+au BufRead,BufNewFile *.{twig} set ft=htmljinja
 
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on
 
+" Make these filetypes follow my personal standards
+au FileType php,css,html,javascript setlocal noexpandtab softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
+
 " make Python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
-au FileType python set expandtab softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
+au FileType python setlocal expandtab softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
 
 " Ruby
-au FileType ruby,yaml set expandtab shiftwidth=2 softtabstop=2
+au FileType ruby,yaml setlocal expandtab shiftwidth=2 softtabstop=2
 
 " make uses real tabs
-au FileType make set noexpandtab
+au FileType make setlocal noexpandtab
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
