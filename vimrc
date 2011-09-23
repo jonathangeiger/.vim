@@ -98,7 +98,7 @@ filetype plugin indent on
 au FileType python set expandtab softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
 
 " Ruby
-au FileType ruby set expandtab shiftwidth=2 softtabstop=2
+au FileType ruby,yaml set expandtab shiftwidth=2 softtabstop=2
 
 " make uses real tabs
 au FileType make set noexpandtab
