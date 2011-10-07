@@ -4,9 +4,13 @@ task :init do
 end
 
 desc "Fetches and builds all of the vim bundles"
-task :make => []
+task :make => ['make:command-t']
 
 namespace :make do
+  task 'command-t' => [:init] do
+    info 'Building Command-T'
+    system 'cd bundle/command-t && rake make'
+  end
 end
 
 desc "Builds itself, then installs the current code into your .vim directory"

@@ -16,18 +16,12 @@ if has("gui_macvim")
   macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
 endif
 
-" CtrlP
-let g:ctrlp_persistent_input = 0
-let g:ctrlp_match_window_reversed = 0
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_mruf_max = 100
-nmap <D-t> <ESC>:CtrlP<CR>
-imap <D-t> <ESC>:CtrlP<CR>
-nmap <D-r> <ESC>:CtrlPMRUFiles<CR>
-imap <D-r> <ESC>:CtrlPMRUFiles<CR>
-nmap <Leader>tr :ClearCtrlPCache<CR>
+" Command-T
+nmap <D-t> :CommandT<CR>
+imap <D-t> <ESC>:CommandT<CR>
+
 " Flush cache when focus is regained
-autocmd FocusGained * ClearCtrlPCache
+autocmd FocusGained * CommandTFlush
 
 " Command-Shift-F for Ack
 nmap <D-F> :Ack<space>''<Left>

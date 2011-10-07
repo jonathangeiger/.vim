@@ -113,6 +113,9 @@ set backspace=indent,eol,start
 let g:syntastic_enable_signs=1
 let g:syntastic_quiet_warnings=1
 
+" Command-T configuration
+let g:CommandTMaxHeight=20
+
 " Use modeline overrides
 set modeline
 set modelines=10
