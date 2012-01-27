@@ -15,9 +15,7 @@ let mapleader = ","
 nnoremap ; :
 inoremap jj <ESC>
 set spell
-
-" Save on focus
-au FocusLost * silent! wa
+set autowrite
 
 " Set encoding
 set encoding=utf-8
