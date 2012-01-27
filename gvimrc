@@ -16,10 +16,6 @@ if has("gui_macvim")
   macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
 endif
 
-" Command-T
-nmap <D-t> :CommandT<CR>
-imap <D-t> <ESC>:CommandT<CR>
-
 " Flush cache when focus is regained
 autocmd FocusGained * CommandTFlush
 
@@ -27,24 +23,8 @@ autocmd FocusGained * CommandTFlush
 nmap <D-F> :Ack<space>''<Left>
 imap <D-F> <ESC>:Ack<space>''<Left>
 
-" ConqueTerm
-nmap <D-e> :call StartTerm("ConqueTermVSplit")<CR>
-nmap <D-E> :call StartTerm("ConqueTermSplit")<CR>
-imap <D-e> <ESC>:call StartTerm("ConqueTermVSplit")<CR>
-imap <D-E> <ESC>:call StartTerm("ConqueTermSplit")<CR>
-
-" ConqueTerm wrapper
-function StartTerm(command)
-  execute a:command . ' ' . $SHELL . ' --login'
-  setlocal listchars=tab:\ \ 
-endfunction
-
 " Command-/ to toggle comments
 map <D-/> <plug>NERDCommenterToggle
-
-" NERDTree configuration
-let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
-nmap <Leader>n :NERDTreeToggle<CR>
 
 " Command-][ to increase/decrease indentation
 map <D-]> >gv

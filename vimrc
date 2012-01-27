@@ -128,11 +128,16 @@ set background=dark
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
-" Turn off jslint errors by default
-let g:JSLintHighlightErrorLine = 0
-
-" MacVIM shift+arrow-keys behavior (required in .vimrc)
-let macvim_hig_shift_movement = 1
-
 " Show (partial) command in the status line
 set showcmd
+
+" Flush cache when focus is regained
+autocmd FocusGained * CommandTFlush
+
+" Bindings
+map  <Leader>/ <plug>NERDCommenterToggle
+nmap <Leader>w :w<CR>
+nmap <Leader>f :Ack<space>''<Left>
+nmap <Leader>m :ZoomWin<CR>
+vmap <Leader>] >gv
+vmap <Leader>[ <gv
