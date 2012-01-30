@@ -137,5 +137,5 @@ map  <Leader>/ <plug>NERDCommenterToggle
 nmap <Leader>w :w<CR>
 nmap <Leader>f :Ack<space>''<Left>
 nmap <Leader>m :ZoomWin<CR>
-vmap <Leader>] >gv
-vmap <Leader>[ <gv
+vmap <Leader>> >gv
+vmap <Leader>< <gv
