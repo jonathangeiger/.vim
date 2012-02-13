@@ -135,9 +135,25 @@ set showcmd
 " Flush cache when focus is regained
 autocmd FocusGained * CommandTFlush
 
+" Balance window sizes
+map <Leader>= <C-w>=
+
+" New splits
+map <Leader>v :botright vnew<CR><C-W>l
+map <Leader>s :belowright new<CR><C-W>j
+
+" Split movement
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" Fast writing and quitting
+nmap <Leader>w :w<CR>
+nmap <Leader>q :q<CR>
+
 " Bindings
 map  <Leader>/ <plug>NERDCommenterToggle
-nmap <Leader>w :w<CR>
 nmap <Leader>f :Ack<space>''<Left>
 nmap <Leader>m :ZoomWin<CR>
 vmap <Leader>> >gv
