@@ -139,8 +139,8 @@ autocmd FocusGained * CommandTFlush
 map <Leader>= <C-w>=
 
 " New splits
-map <Leader>v :botright vnew<CR><C-W>l
-map <Leader>s :belowright new<CR><C-W>j
+map <Leader>v :botright vnew<CR><C-W>l<C-w>=
+map <Leader>s :belowright new<CR><C-W>j<C-w>=
 
 " Split movement
 map <C-h> <C-w>h
