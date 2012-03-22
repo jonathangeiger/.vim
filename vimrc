@@ -107,10 +107,7 @@ set showcmd
 autocmd CursorHold,CursorHoldI * silent! wa
 
 " Balance window sizes automatically
-autocmd VimResized,BufAdd,BufDelete * wincmd =
-
-" Balance window sizes
-map <Leader>= <C-w>=
+autocmd VimResized,BufEnter * wincmd =
 
 " New splits
 map <Leader>v :botright vnew<CR><C-W>l
