@@ -129,3 +129,7 @@ nmap <Leader>f :Ack<space>''<Left>
 nmap <Leader>m :ZoomWin<CR>
 vmap <Leader>> >gv
 vmap <Leader>< <gv
+
+" Fugitive
+nmap <Leader>gb :Gblame<CR>
+nmap <Leader>gd :Gdiff<CR>
