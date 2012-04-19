@@ -89,10 +89,6 @@ au FileType ruby,yaml setlocal expandtab shiftwidth=2 softtabstop=2
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-" Enable syntastic syntax checking
-let g:syntastic_enable_signs=1
-let g:syntastic_quiet_warnings=1
-
 " Command-T configuration
 let g:CommandTMaxHeight=20
 
