@@ -2,6 +2,7 @@ set nocompatible
 
 set number
 set ruler
+set colorcolumn=80
 syntax on
 
 " Visual things
@@ -78,6 +79,9 @@ au FileType python setlocal expandtab softtabstop=4 tabstop=4 shiftwidth=4
 
 " PHP and more
 au FileType php,css,html,htmljinja,javascript setlocal noexpandtab softtabstop=4 tabstop=4 shiftwidth=4
+
+" Don't wrap HTML
+au FileType html,htmljinja setlocal textwidth=0
 
 " Ruby
 au FileType ruby,yaml setlocal expandtab shiftwidth=2 softtabstop=2
