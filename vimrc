@@ -89,9 +89,6 @@ au FileType ruby,yaml setlocal expandtab shiftwidth=2 softtabstop=2
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-" Command-T configuration
-let g:CommandTMaxHeight=20
-
 " Default color scheme
 color solarized
 set background=dark
