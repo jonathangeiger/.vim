@@ -34,6 +34,7 @@ set noexpandtab
 
 " Nice invisibles
 set list listchars=tab:·\ ,trail:•
+set fileformats=unix
 
 " Searching
 set ignorecase
