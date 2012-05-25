@@ -52,3 +52,6 @@
 [submodule "bundle/ctrp"]
 	path = bundle/ctrp
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule "bundle/less"]
+	path = bundle/less
+	url = https://github.com/groenewege/vim-less.git
