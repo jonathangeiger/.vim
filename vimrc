@@ -1,4 +1,5 @@
 set nocompatible
+filetype off
 
 set number
 set ruler
@@ -62,9 +63,28 @@ set laststatus=2
 " This is likely a bludgeon to solve some other issue, but it works
 set noequalalways
 
-" Pathogen
-runtime bundle/pathogen/autoload/pathogen.vim
-call pathogen#infect()
+" Vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'mileszs/ack.vim'
+Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'tpope/vim-git'
+Bundle 'pangloss/vim-javascript'
+Bundle 'ddollar/nerdcommenter'
+Bundle 'tpope/vim-surround'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'ervandew/supertab'
+Bundle 'vim-scripts/ZoomWin'
+Bundle 'tpope/vim-markdown'
+Bundle 'vim-scripts/Jinja'
+Bundle 'ocim/htmljinja.vim'
+Bundle 'DataWraith/auto_mkdir'
+Bundle 'jonathangeiger/Vim-PHP-Doc'
+Bundle 'tpope/vim-fugitive'
+Bundle 'kien/ctrlp.vim'
+Bundle 'groenewege/vim-less'
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby

@@ -1,16 +1,5 @@
-task :init do
-  info 'Initializing bundles'
-  system "git submodule update --init"
-end
-
-desc "Fetches and builds all of the vim bundles"
-task :make => []
-
-namespace :make do
-end
-
 desc "Builds itself, then installs the current code into your .vim directory"
-task :install => [:init, :make] do
+task :install do
 
   dest = File.expand_path("~/.vim")
   cwd  = File.dirname(__FILE__)
@@ -38,17 +27,10 @@ task :install => [:init, :make] do
       ln_s(File.expand_path("../#{file}", __FILE__), dest)
     end
   end
-end
 
-desc "Upgrades all of the code and installs the new version"
-task :upgrade => [:update, :make, :install]
+  info 'Installing bundles'
+  system('vim +BundleInstall +qall')
 
-task :update => [:init] do
-  info 'Upgrading main repository'
-  system 'git pull'
-
-  info 'Upgrading bundles'
-  system 'git submodule foreach git pull origin master'
 end
 
 def info(message)
