@@ -85,6 +85,7 @@ Bundle 'jonathangeiger/Vim-PHP-Doc'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
 Bundle 'groenewege/vim-less'
+Bundle 'scrooloose/syntastic'
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
