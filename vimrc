@@ -96,6 +96,9 @@ au BufRead,BufNewFile *.json set ft=javascript
 " Map .twig files as jinja templates
 au BufRead,BufNewFile *.{twig} set ft=htmljinja
 
+" Add .less highlighting
+au BufRead,BufNewFile *.{less} set ft=less
+
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on
 
