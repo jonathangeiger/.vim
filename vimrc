@@ -132,7 +132,10 @@ set showcmd
 autocmd CursorHold,CursorHoldI * silent! wa
 
 " Balance window sizes automatically
-autocmd VimResized,BufEnter * wincmd =
+autocmd VimResized,BufNew * wincmd =
+
+" Fast resizing of splits
+map <C-=> <C-w>=
 
 " New splits
 map <Leader>v :botright vnew<CR><C-W>l
