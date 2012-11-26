@@ -107,13 +107,16 @@ filetype plugin indent on
 au FileType python setlocal expandtab softtabstop=4 tabstop=4 shiftwidth=4
 
 " PHP and more
-au FileType php,css,html,htmljinja,javascript setlocal noexpandtab softtabstop=4 tabstop=4 shiftwidth=4
+au FileType php,css,html,htmljinja,javascript setlocal expandtab softtabstop=4 tabstop=4 shiftwidth=4
+
+" Yaml files in symfony use four spaces
+au FileType yaml setlocal expandtab shiftwidth=4 softtabstop=4
 
 " Don't wrap HTML
 au FileType html,htmljinja setlocal textwidth=0
 
 " Ruby
-au FileType ruby,yaml setlocal expandtab shiftwidth=2 softtabstop=2
+au FileType ruby setlocal expandtab shiftwidth=2 softtabstop=2
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
