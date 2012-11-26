@@ -132,6 +132,12 @@ set directory=~/.vim/backup
 " Show (partial) command in the status line
 set showcmd
 
+" Disable ctrlp's working path detection
+let g:ctrlp_working_path_mode = ''
+
+" Ignore cached files
+set wildignore+=*.cache.php,*.php.meta
+
 " Auto save files
 autocmd CursorHold,CursorHoldI * silent! wa
 
