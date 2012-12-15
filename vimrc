@@ -53,7 +53,8 @@ vnoremap / /\v
 
 " Tab completion
 set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,*/vendor/gems/*
+set wildignore+=*.pyc,*.pyo,*.egg-info,*.egg,*/env/*
 
 " Status bar
 set laststatus=2
