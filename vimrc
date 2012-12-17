@@ -64,6 +64,10 @@ set laststatus=2
 " This is likely a bludgeon to solve some other issue, but it works
 set noequalalways
 
+" Per-project settings
+set exrc
+set secure
+
 " Vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
