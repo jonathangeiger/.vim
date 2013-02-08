@@ -166,7 +166,7 @@ nmap <Leader>q :q<CR>
 
 " Bindings
 map  <Leader>/ <plug>NERDCommenterToggle
-nmap <Leader>f :Ack<space>''<Left>
+nmap <Leader>f :Ack<space>
 nmap <Leader>m :ZoomWin<CR>
 vmap <Leader>> >gv
 vmap <Leader>< <gv
