@@ -90,6 +90,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'groenewege/vim-less'
 Bundle 'scrooloose/syntastic'
 Bundle 'juvenn/mustache.vim'
+Bundle 'vim-scripts/EasyGrep'
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
@@ -167,6 +168,7 @@ nmap <Leader>q :q<CR>
 " Bindings
 map  <Leader>/ <plug>NERDCommenterToggle
 nmap <Leader>f :Ack<space>
+nmap <Leader>r :Replace<space>
 nmap <Leader>m :ZoomWin<CR>
 vmap <Leader>> >gv
 vmap <Leader>< <gv
