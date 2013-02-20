@@ -139,6 +139,11 @@ set showcmd
 " Disable ctrlp's working path detection
 let g:ctrlp_working_path_mode = ''
 
+" Set defaults for EasyGrep
+let g:EasyGrepRecursive = 1
+let g:EasyGrepAllOptionsInExplorer = 1
+let g:EasyGrepEveryMatch = 1
+
 " Ignore cached files
 set wildignore+=*.cache.php,*.php.meta
 
