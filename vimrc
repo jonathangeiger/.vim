@@ -165,6 +165,9 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" New tab
+map <Leader>t :tabnew<CR>
+
 " Fast writing and quitting
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
