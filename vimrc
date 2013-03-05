@@ -142,6 +142,10 @@ let g:ctrlp_working_path_mode = ''
 let g:EasyGrepRecursive = 1
 let g:EasyGrepAllOptionsInExplorer = 1
 let g:EasyGrepEveryMatch = 1
+let g:EasyGrepCommand = 1
+
+" Use ack for grepping
+set grepprg=ack
 
 " Ignore cached files
 set wildignore+=*.cache.php,*.php.meta
